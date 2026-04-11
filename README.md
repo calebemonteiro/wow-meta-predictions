@@ -93,6 +93,8 @@ Built with Python, scikit-learn, SQLite, Jinja2, and Chart.js. Data sourced from
 
 The source code and model are in a private repository. This page is the output.
 
+If you have ideas, want to collaborate, or just want to talk data and Mythic+ — reach out at [me@calebemonteiro.com](mailto:me@calebemonteiro.com).
+
 ---
 
 *Updated weekly after the Mythic+ reset. Predictions are statistical estimates, not guarantees — the meta has a way of surprising everyone.*
