@@ -26,6 +26,26 @@
     @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
     @media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
 
+    /* ── Hero banner ──────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 220px;
+      background: url('dORCtor.png') center 20% / cover no-repeat;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(13,17,23,0.92) 35%, rgba(13,17,23,0.25) 100%);
+      display: flex;
+      align-items: center;
+    }
+    .hero-text h1 { font-size: 2rem; font-weight: 800; color: #f0a500; letter-spacing: .5px; line-height: 1.2; }
+    .hero-text .sub { font-size: .95rem; color: #8b949e; margin-top: .4rem; }
+    @media (max-width: 600px) {
+      .hero { height: 160px; }
+      .hero-text h1 { font-size: 1.4rem; }
+    }
+
     /* ── Header ───────────────────────────────────────────────────────── */
     header {
       background: linear-gradient(135deg, #161b22 0%, #1a2040 100%);
@@ -33,10 +53,7 @@
       padding: 1.5rem 0 1.25rem;
       position: sticky; top: 0; z-index: 100;
     }
-    header .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
-    .logo { display: flex; align-items: center; gap: .75rem; }
-    .logo h1 { font-size: 1.35rem; font-weight: 700; color: #f0a500; letter-spacing: .5px; }
-    .logo .sub { font-size: .8rem; color: #8b949e; margin-top: .1rem; }
+    header .container { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: .75rem; }
     .header-meta { display: flex; gap: 1.25rem; flex-wrap: wrap; }
     .meta-pill {
       background: #21262d;
@@ -222,15 +239,19 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════════ HEADER -->
+<!-- ═══════════════════════════════════════════════════════════════════════ HERO -->
+<div class="hero">
+  <div class="hero-overlay">
+    <div class="hero-text container">
+      <h1>M+ Meta Predictor</h1>
+      <div class="sub">World of Warcraft &mdash; Mythic+</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════ HEADER -->
 <header>
   <div class="container">
-    <div class="logo">
-      <div>
-        <h1>M+ Meta Predictor</h1>
-        <div class="sub">World of Warcraft &mdash; Mythic+</div>
-      </div>
-    </div>
     <div class="header-meta">
       <div class="meta-pill">Season <span>MN Season 1</span></div>
       <div class="meta-pill">Current <span>2026-W14</span></div>
