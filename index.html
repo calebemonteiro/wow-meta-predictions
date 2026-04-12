@@ -262,6 +262,8 @@
     }
     .tier-btn:hover { border-color: #f0a500; color: #e6edf3; }
     .tier-btn.active { background: #2d2000; border-color: #f0a500; color: #f0a500; }
+    .tier-btn .tier-count { display: block; font-size: .68rem; font-weight: 400; color: #6e7681; margin-top: .1rem; }
+    .tier-btn.active .tier-count { color: #a16207; }
     .tier-panel { display: none; }
     .tier-panel.active { display: block; }
 
@@ -302,16 +304,19 @@
     <button class="tier-btn active"
             onclick="switchTier('all', this)">
       All Keys
+      <span class="tier-count">276,291 runs</span>
     </button>
     
     <button class="tier-btn "
             onclick="switchTier('high', this)">
       High Keys (20+)
+      <span class="tier-count">140 runs</span>
     </button>
     
     <button class="tier-btn "
             onclick="switchTier('mid', this)">
       Keys 7–19
+      <span class="tier-count">276,151 runs</span>
     </button>
     
   </div>
